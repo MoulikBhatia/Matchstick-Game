@@ -24,11 +24,11 @@ while True:
         print("Game Start\n")
         while ms>2:
             print("Current number of matchsticks:",ms)
-            while U1:
+            while U1==True:
                 try:
                     a=int(input("Enter the amount of matchsticks you would like to remove:"))
                 except ValueError:
-                    print("Please print numbers from 1 to 3 only")
+                    print("Please input numbers from 1 to 3 only")
                     if a==1 or a==2 or a==3:
                         U1=False
                     else:
@@ -77,11 +77,22 @@ while True:
             print("Hooray! You won!")
     if C1==2:
             print('''
-            ----------------------------------------------------------
-                                   HOW TO PLAY
-            ----------------------------------------------------------
-                How to play:
-                    1. The game will ask for inputs in this pattern:''')
+        ----------------------------------------------------------
+        |                  HOW TO PLAY                           |
+        ----------------------------------------------------------
+        | How to play:                                           |
+        |                                                        |
+        |1. The game will ask for number of matchsticks to add.  |
+        |                                                        |
+        |                                                        |
+        |2. Enter your desired amount of matchsticks from 1 to   |
+        |   3 and continue until you reach zero.                 |
+        |                                                        |
+        |                                                        |
+        |3.AI or user, the first one to reach zero loses.        |
+        ----------------------------------------------------------
+        |                  PRESS ANY KEY TO GO BACK              |
+        ----------------------------------------------------------''')
             ext1=input()
             if ext1==ext1:
                 pass       
@@ -107,8 +118,4 @@ while True:
         ext1=input()
         if ext1==ext1:
                 pass
-    else:
-        print("""
-INVALID INPUT!
-        """)
-        pass
+    
